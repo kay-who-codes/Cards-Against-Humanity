@@ -181,7 +181,7 @@ body.dark-mode #toggle-button:hover {
 
 /* Dark Mode Styles */
 body.dark-mode {
-  background-color: #131313;
+  background-color: #333;
   color: white;
 }
 
@@ -234,8 +234,8 @@ body.dark-mode #card-display button:hover {
   }
 
   #pack-selection {
-    width: 200px;
-    height: 190px;
+    width: 130px;
+    height: 80px;
     font-size: 14px;
   }
 
@@ -272,6 +272,8 @@ body.dark-mode #card-display button:hover {
 
   #pack-selection {
     font-size: 15px;
+    height: 60px;
+    width: 170px;
   }
 
   #toggle-button {
