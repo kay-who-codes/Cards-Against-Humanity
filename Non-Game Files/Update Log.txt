@@ -1,0 +1,4 @@
+App Update: 1
+Date of Update: 15 Dec 2024 @ 23:05
+Details: Finished styling and added ALL cards
+
