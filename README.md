@@ -2,7 +2,7 @@
 
 Each player uses their own device to generate cards, and use the generated cards to play the game together irl.
 
-Play it **[HERE](https://kay-who-codes.github.io/Misanthrocards/)**.
+Play it **[HERE](https://kay-who-codes.github.io/Cards-Against-Humanity/)**.
 
 I'm open to improvement suggestions.
 
