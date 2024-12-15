@@ -9,7 +9,7 @@
 <body>
 
   <!-- Main Menu -->
-  <div id="main-menu">
+  <div class="main-menu" id="main-menu">
     <h1>Cards Against Humanity</h1>
 
     <!-- Draw Buttons -->
@@ -17,8 +17,10 @@
     <button class="draw-white-cards" id="draw-white-cards" onclick="drawWhiteCards()">Draw White Cards</button>
 
     <!-- Deck Selection Dropdown -->
-    <label for="pack-selection">Select Decks:</label>
-    <select id="pack-selection" multiple>
+    <br>
+    <label class="select-decks-text"for="pack-selection">Select Decks:</label>
+    <br>
+    <select class="pack-selection" id="pack-selection" multiple>
     </select>
   </div>
 
@@ -29,13 +31,13 @@
     <button onclick="returnToMenu()">Back to Menu</button>
   </div>
 
-<!-- Light Mode / Dark Mode Toggle -->
-<div id="mode-toggle" style="position: absolute; bottom: 50px;">
-  <button id="toggle-button" onclick="toggleMode()">☀️/🌙</button>
-</div>
 
-<!-- Credit Message -->
+
 <footer class="credit-message">
+  <!-- Light Mode / Dark Mode Toggle -->
+<div id="mode-toggle">
+  <button class="mode-toggle" id="toggle-button" onclick="toggleMode()">☀️/🌙</button>
+</div>
   Inspired by <a href="https://www.cardsagainsthumanity.com/" target="_blank">Cards Against Humanity</a>,
   Created by <a href="https://linktr.ee/kaywhocreates" target="_blank">Kay 🧡</a>
 </footer>
