@@ -26173,5 +26173,2350 @@
         "Type": "Response",
         "Text": "Not even knowing what’s happening anymore.",
         "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "Alright, class. Projects are due this Friday, and don’t forget: you get extra credit for _______!",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "Archaeologists now believe that Ancient Egyptians worshipped _______.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "Behold, I have pulled the sword from the stone! I am now the King of _______.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "“Hey Mom? Can you sign this permission slip for _______?”",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "I am very smart. I am currently reading a 500-page book about _______.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A gerbil-powered spanking machine.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A rectal thermometer.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "An authentic 250-year-old George Washington turd.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Angering the gods.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Calculating the volume of a sphere.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Dandruff, the forbidden protein.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Dead dead dead dinosaurs.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Former President Donald Trump.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Getting my butt stuck in a black hole.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "“Golf 2, now with swords!”",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "How stupid the teacher is.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Intelligent kids, such as myself.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Math camp.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "No longer going to school because I already know everything.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Pingus Pongus, God of Ping Pong.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Plagiarism.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Pronouns.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Separating a baby corn from its mother.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Setting stuff on fire with your MIND.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "“Showgurt:the yogurt that makes you tap dance.”",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Stress.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Sucking at sports.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "The president of Chess Club.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "THE SUN!",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Wearing glasses and sounding smart.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "Alright, which one of you kids has been typing “______” into YouTube?",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "Hey kids! Are you ready for the best summer ever? Welcome to Camp ______!",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "Oh noooooo, the substitute teacher is ______!",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "That’s not fair! You can’t give me detention for ______.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "What’s pretty much the stupidest thing in the world?",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Barfing mustard.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Being bad at school but good at microwaving burritos.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Being forced by the government to go to school for eight hours a day.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Being unable to learn because I am a pinecone.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Boring stuff that nobody cares about.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Cheating.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Disappointing your parents.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Ditching school.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Driving around town in a tank.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Everyone in class pooping their pants at the same time.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Farting in my sister’s lunchbox and closing it.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Getting picked last.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Getting your tongue stuck in a vacuum cleaner.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Going to school naked.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Graduating from Idiot University with a degree in Stupid.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Hijacking the schoolbus and driving it straight to Six Flags.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Not doing my homework.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Not knowing what a triangle is.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Paying Dad five dollars to do my homework.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Poop poop poop poop poop poop poop poop poop poop poop poop poop poop poop poop poop poop poop poop poop poop poop poop poop poop poop",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Rejecting modern society and living life as a raccoon.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Screaming “I AM A MOSQUITO!” and running around biting people.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Stealing a penguin and taking it home in your backpack.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "The answers to tomorrow’s math test.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Throwing a water balloon full of horse pee at the teacher.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "Ah HA! It was Professor Plum, in the Library, with ______!",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "Mommy, there’s a monster under my bed and he wants ______.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "My all-time favorite book is “The Lion, The Witch, and ______.”",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "No, Josh may not come over. He has yet to apologize for ______.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A cow that farts cows.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A golf course full of landmines.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A water bottle that drinks people.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Bathing in Spaghetti-Os.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Chicken nuggies!",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Creepy Jim, a 45-year-old man who lives in a pine tree.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Dad’s anger management problems.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Evil walking pants.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Getting beaten up by a kangaroo.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Getting rickrolled.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Having a dream about peeing, and then actually peeing.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Having an emotional breakdown.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Intensely staring into a horse’s butt.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Jumping on a trampoline naked.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Kyle’s glistening abs.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Leaving the door open while pooping.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Mom’s bad cooking.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Mystery meat.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Not having a future to look forward to because the planet is dying.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Pooping on the lawn and lighting it on fire and dancing around the flaming poop.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Rubbing butter all over my body.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Tears, pain, death, and destruction.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "The goat man who lives in the basement.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Vomiting with style.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Wearing a monocle and talking like a British man.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Wearing my mother’s bra.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "I like ______ and I cannot lie!",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "My anaconda don’t want none unless you got ________, hun.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "My homeboys tried to warn me, but _______ makes me so horny.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "An ass like two football helmets.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "An ass like two old Italian faces telling secrets.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Bad bitches with fat asses.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Being grossly unprepared for this jelly.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Blowing a fart hole in my yoga pants.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Carrying my poop around in a ziplock bag.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Cellulite.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Cheesy French anus.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Doing my duty to your booty.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "How good the booty taste.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Me arse.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "My faithful donkey Bathsheba.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Pooping and then looking at the poop.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Rubbing sage all over my butt cancer.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Ruining my asshole with super glue.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Shitting out a hot stack of pancakes and a pat of butter.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Showing everyone my lil’ dumper.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Sir Mix-a-lot.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Sir Thomas Crapper, inventor of the toilet.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Tender anal love.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "That post-smack jiggle.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "The sun-ripen asses of Sicily.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Thick Ukrainian ass.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Tight, red baboon ass.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Tracing the furrows of your cellulitic ass like a loving cartographer.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Waxing my asshole.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Your ass cheeks on my face cheeks.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "Everyone is staring at you because you’re ___.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "Hold up. I gotta deal with ___, then l’mma smoke this.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "Okay here’s the pitch. James Franco and Seth Rogen are trying to score some weed, and then ___ happens.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "You know what’s, like, really funny when you think about it? ___.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A bong rip so massive it restores justice to the kingdom.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A sandwich with Cheetos in it!",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A whole cheese pizza just for me.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "An eight-foot man smoking a six-foot bong.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Ancient aliens.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Being too high for airplane.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Cheese crunchies.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Dank ass cancer weed.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Dicking around on the guitar for an hour.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Dropping stuff and knocking everything over.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Eating all the skin off a rotisserie chicken.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Forgetting to breathe and then dying.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Getting high and watching Planet Earth.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Grinning like an idiot.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Hot tub.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "How bright the sun is.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Huge popcorn nugs of hairy alien weed.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "My own fingers.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Smoking a blunt butt-ass naked.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Smoking a joint with former President Barack Obama.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Snoop Dogg.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "The banks, the media, the entire system, man.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Too much edibles.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Unbelievably soft carpet.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Whatever the fuck I was just talking about.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "______? That’s a no from me, dawg.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "16 people. 39 days of ______. One Survivor.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "I couldn’t help but wonder. Was “having it all” an unattainable myth? Was the secret to a truly happy life just ______?",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "Oh my god! ______ killed Kenny!",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "Oops! I did it again. I played with ______.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "All these boys in my yard asking for milkshakes.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Being a total Miranda.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Blowing Lucas on an inflatable chair.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Chunky highlights.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Competing against 20 other women for the love of Flava Flav.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Cybering with diselman89.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Defining marriage as the union of one man and one woman.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Doing 9/11.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Downloading a bunch of weird porn on Kazaa.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Getting crunk.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Getting drenched in Dave Matthew’s shit and piss.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Getting pwned.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Going to prom with a 108-year-old vampire.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Hoobastank.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Killing Dumbledore.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Letting the terrorists win.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Starting to be cool about gay people.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Suspicious white powder.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Taking a blurry photo of my penis on my Motorola Razr.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "The conservative blogosphere.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "The new Sweet Onion Chicken Teriyaki sandwich from Subway!",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Trapping my Sim in a swimming pool until she shits herself.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Two girls sharing one cup of poop.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Vajazzling my vajayjay.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Weapons of mass destruction.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "Wait, I came here to buy socks. How did I wind up with ______?",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A framed photocopy of an oil painting of Paris, France.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A Pringle®.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A Pringles® can full of screams.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "An 800-foot-long pool noodle.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "An exclusive partnership with Taylor Swift.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Blood Pringles®.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Buying and returning clothes just to have someone to talk to.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Buying the right toothbrush cup for my lifestyle.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Confusing possessions with accomplishments.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Crunchy snacks for my big flappy mouth.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Extracting the maximum amount of money from naive consumers.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Gender-neutral toys that make children feel no emotions whatsoever.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Getting eaten out in the family fitting room.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "How fun it is to eat Pringles®.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Refusing to go up a size.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Saving 20% or more on khakis.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Shiny gadgets for sadness distraction.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Subsisting on tiny pizzas.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "The obscene amount of money Cards Against Humanity is making by selling this game at Target®.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A killer’s diet of bush, cucumbers, and feathers.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A woman who is so smart that she can predict the movements of 300 birds.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Finding a nipple and being like “Oooh! That’s a nipple!”",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Getting Masturbated to.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Giving grandma crappy things she doesn’t like.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Ham finger.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Hands down the best eggnog I have ever had.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Insane empanadas.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Kim Kardashian, but with spider legs.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Laughing hysterically while my partner pours coffee into my eyes.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "More olives than you could possibly understand.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Mr. Poop.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "My disgusting pot-bellied boy.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "P.F. Chang’s fusion of casual and formal cuisine.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Screaming “there’s a hawk up my ass!”",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Secret CIA moon prisons.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Sitting in the back of the plane, smoking a cigar and reading the Flickr privacy policy.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Some kind of mutated shrimp that can suck dick like a pro.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Some sort of unstoppable poo gun.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Stairs.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "That shitty season of Mad Men where Sterling Cooper Draper Pryce gets destroyed by Daenerys Targaryen’s dragons.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "The amount of emotions a peanut would be capable of holding.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "The idea of a walrus.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "The lesbians of Iowa.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "The real story behind the yogurt that came out of Tina’s vagina.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "The unspeakable secrets of the weasels.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "These amazing testicles I’m about to share with you.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "These awesome gadgets that track my every move.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "These new jeans that look so cool but are actually so bad.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "What I Doin’.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "Do not go gentle into that good night. Rage, rage against ______?",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "Sure, sex is great, but have you tried _______?",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A pointless job at a soulless corporation.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Being terrified of a single bee.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Being young and in love in New York City.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Chemotherapy.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Delighting in the pain of others.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Forming a monogamous pair bond.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Getting my butt trapped hilariously in a tuba.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Getting sad for no reason.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Good ol’ fashioned face-to-face conversation.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Harnessing the power of steam!!!",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "How good this cantaloupe feels on my penis.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Just hangin’ out, ya know?",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Like 50 mosquito bites.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Losing a loved one to Fox News.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Really tall people.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Saying “what’s that?” And then stealing a french fry.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Sucking all the oil out of the planet and fucking off to Mars.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "The bomb strapped to my chest.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "The joy of song.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "The salmon.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "The unspeakable horrors of factory farming.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "The whole Jeffrey Epstein thing.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "This horrible thing called Twitter.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Three hours of pimple-popping videos.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Unwelcome sexual attention from grown men.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Using words to communicate.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "War with China.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Watching the life drain from the eyes of my son’s killer.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "Excuse me, straight man, but ______ isn’t for you, STRAIGHT MAN.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "GOD HATES ______!",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "If you can’t love yourself, how the hell you gonna love ______?",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "We’re here! We’re ______! Get used to it!",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "YAAAAAAS! You are serving me ______ realness!",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "30 shirtless bears emerging from the fog.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A 6-hour conversation on gender and queer theory.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A big black dick strapped to a frail white body.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A genderless hole.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A messy bitch who lives for drama.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A Subaru.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A twink in a bounce house.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "All the different kinds of lesbians.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Black, white, Puerto Rican, and Chinese boys.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Britney, bitch!",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Getting your ass ate.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Having your titties sucked while sucking on titties.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Licking that pussy right.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Marsha P. Johnson, the trans woman of color who may have thrown the first brick at Stonewall.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Older fitness gays.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Peeing in a bathroom.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Poppers and lube.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "PrEP.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Repeatedly coming out as bisexual.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Talking, laughing, loving, breathing, fighting, fucking, crying, drinking, riding, winning, losing, cheating, kissing, thinking, dreaming.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Telling Heather she can’t pull off that top.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "The careless cunt who left a water ring on my credenza.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "The pan-ethnic, gender-fluid children of the future.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Those cheekbones, honey.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Whatever straight people do for fun.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "All classes today are canceled due to ______.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "Did you know? Our college was recently named the #1 school for ______!",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "In this paper, I will explore ______ from a feminist perspective.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "My memory of last night is pretty hazy. I remember ______ and that’s pretty much it.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "Pledges! Time to prove you’re Delta Phi material. Chug this beer, take off your shirts and get ready for ______.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "The Department of Psychology is looking for paid research volunteers. Are you 18-25 and suffering from ______?",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A 30-rack of Natty Light.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A bachelor’s degree in communications.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A girl who is so interesting that she has blue hair.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A Yale man.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "An emergency all-floor meeting on inclusion.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Boycotting Israel.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Calling mom because it’s just really hard and I miss her and I don’t know anyone here.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Falling in love with poetry.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Five morons signing a lease together.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Fucking the beatboxer from the a cappella group.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Going to college and becoming a new person, who has sex.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Googling how to eat pussy.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Horny Christian Teens.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "My high school boyfriend.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Performative wokeness.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Pretending to have done the reading.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Rocking a 1.5 GPA.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Sucking a flaccid penis for 20 minutes.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "The sound of my roommate masturbating.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Throw up.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Underage drinking.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Wandering the streets in search of a party.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Whichever one of you took a shit in the shower.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Young Republicans.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "Aw babe, your burps smell like ______!",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "Don’t miss Rachel Ray’s hit new show, Cooking with ______.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "Excuse me, waiter. Could you take this back? This soup tastes like ______.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "I’m Bobby Flay, and if you can’t stand ______, get out of the kitchen!",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "It’s not delivery. It’s ______.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "Now on Netflix: Jiro Dreams of ______.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A belly full of hard-boiled eggs.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A joyless vegan patty.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A sobering quantity of chili cheese fries.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A table for one at The Cheesecake Factory.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Being emotionally and physically dominated by Gordon Ramsay.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Clamping down on a gazelle’s jugular and tasting its warm life waters.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Committing suicide at the Old Country Buffet.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Father’s forbidden chocolates.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Jizz Twinkies.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Kale farts.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Kevin Bacon Bits.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Licking the cake batter off of grandma’s fingers.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Motherfucking tater tots.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Not knowing what to believe anymore about butter.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Oreos for dinner.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Real cheese flavor.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Soup that’s better than pussy.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Sucking down thousands of pounds of krill every day.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Swishing the wine around and sniffing it like a big fancy man.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "The $1 Beefy Fritos Burrito from Taco Bell.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "The Hellman’s Mayonnaise Corporation.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "The hot dog I put in my vagina ten days ago.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "The inaudible screams of carrots.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "What to do with all of this chocolate on my penis.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "According to Freud, all children progress through three stages of development: the oral stage, the anal stage, and the ______ stage.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "Can’t you see? The Jews are behind everything-the banks, the media, even ______!",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "Coming to Broadway next season: “______ on the Roof.”",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "Oh, your daughter should meet my son! He gives to charity, he loves ______ and did I mention he’s a doctor?",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "What’s so important right now that you can’t call your mother?",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A big brain full of facts and sadness.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A headache that’s definitely cancer.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A lifetime of internalized guilt.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A three-foot-tall corned beef sandwich.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Also being named Harvey Weinstein.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Bags of money.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Being a burden.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Bupkis.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Chopping off a bit of the penis.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Hiding from the Nazis.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Holding up the line at Walgreens by trying to use an expired coupon.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Kvetching.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Pork products.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Resurrecting an army of six million Jews and conquering Germany.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Sacrificing Isaac to the Lord.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Some kind of concentrated encampment for people.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Suddenly remembering that the Holocaust happened.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "The blood of Christian babies.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "The ethical implications of enjoying a Woody Allen film in light of his child fucking against him.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "The part of Anne Frank’s diary where she talks about her vagina.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Thy neighbor’s wife.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Usury.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Wandering the desert for 40 years.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "What it means to be a Jewish woman in contemporary society.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Whoopi Goldberg.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "Blessed are you, Lord our God, creator of the universe, who has granted us _____.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "Donna, pick up my dry cleaning and get my wife something for Christmas. I think she likes _____.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "“Here’s what you can expect for the new year. Out: __. In: __.”",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "It’s beginning to look a lot like _____.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "Jesus is _____.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "This holiday season, Tim Allen must overcome his fear of _____ to save Christmas.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "What’s the one thing that makes an elf instantly ejaculate?",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "You love Black Friday. You love Cyber Monday. So don’t miss _____ Wednesday, only at Kohl’s!",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A choir of angels descending from the sky and jizzing all over Dad’s sweater.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A snowman that contains the soul of my dead father.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A toxic family environment.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Another shitty year.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Capitalism",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Elf cum.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Finding out that Santa isn’t real.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Fucking up Silent Night in front of 300 parents.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Gift-wrapping a live hamster.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "How cool it is that I love Jesus and he loves me back.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "How great of a blowjob Jesus could give.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "How many drinks Aunty Deborah has had.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "My hot cousin.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "My uncle who voted for Trump.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Piece of shit Christmas cards with no money in them.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Pretending to be happy.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Probably Grandma’s last Christmas, kids.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Socks.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Starting to see where ISIS is coming from.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "The 9,000 children who starved to death today.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "The shittier, Jewish version of Christmas.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "These low, low prices!",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "Don’t worry, Penny! Go Go Gadget ______!",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "I need you like ______ needs ______.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "I’m just gonna stay in tonight. You know, Netflix and ______.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "Nothing says “I love you” like ______.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "Such ______. Very ______. Wow.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "This app is basically Tinder but for ______.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "TRIGGER WARNING: ______.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "What did I nickname my genitals?",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A complete inability to understand anyone else’s perspective.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A fun, sexy time at the nude beach.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A man from Craigslist.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A night of Taco Bell and anal sex.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A respectful discussion of race and gender on the Internet.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Cat massage.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Getting death threats.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Getting teabagged by a fifth grader in Call of Duty.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Goats screaming like people.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Internet porn analysis paralysis.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Lofi hip hop beats to relax/study too.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Matching with Mom on Tinder.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "My browser history.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "My privileged white penis.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Pretending to be black.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Smash Mouth.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Some racist-ass shit.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Taking a shit while running at full speed.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Three years of semen in a shoebox.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Tweeting an apology.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "W. W. W. DOT BIG DADDY SEX HOLE DOT COM.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Youtube comments.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "“Alright everybody, HOLD! Kelly, why is there ______ on my stage?”",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "Comedy = Tragedy + ______.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "Let’s take it from the top, and remember, you are ______. Show me __________ (SAME CARD AGAIN).",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "“Match-maker, match-maker, make me a match. Find me ______.”",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Prompt",
+        "Text": "This season at Manhattan Theatre Club: “Who’s afraid of ______?”",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A dead salesman.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A Drama Desk Award for Outstanding Sound Design in a Play.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A fog machine.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "A play about people I don’t like doing things I don’t care about.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Absolutely butchering Sondheim.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "All 59 inches of Kristin Chenoweth.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "An autographed headshot of Nathan Lane.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Being crushed to death by a stage light.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Brief male nudity.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Five miso soups, four seaweed salads, three soy burger dinners, two tofu dog platters, and one pasta with meatless meatballs.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Forgetting your lines, shitting your pants, and your pants falling down.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Improv comedy.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Killing Dad and fucking Mom.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Linda, 18 but wise beyond her years, achingly beautiful.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "My whole family watching.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Narcissistic Personality Disorder.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Problematic depictions of Asian characters.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Rampant misogyny and sexual harassment.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Taking a year off to study Japanese puppet theatre.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "The Phantom of the Opera.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "The wickedly talented, one and only, Adele Dazeem.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "This old lady next to me who won’t stop farting.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Two contrasting monologues— one classical, one contemporary.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Two men in a horse costume.",
+        "Pack": "The Smaller Packs"
+    },
+    {
+        "Type": "Response",
+        "Text": "Two tickets to Hamilton.",
+        "Pack": "The Smaller Packs"
     }
 ]
