@@ -1,0 +1,222 @@
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+  text-align: center;
+  flex-direction: column;
+  color: #000;
+}
+
+#main-menu, #card-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#main-menu {
+  justify-content: center;
+  gap: 20px;
+}
+
+#main-menu button {
+  width: 200px;
+  height: 200px;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 20px 0;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+#main-menu .draw-black-card {
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #000;
+}
+
+#main-menu .draw-white-cards {
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000;
+}
+
+#main-menu button:hover {
+  transform: scale(1.05);
+}
+
+#pack-selection {
+  width: 200px;
+  height: 157px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #000;
+  font-size: 16px;
+  background-color: #bdbdbd;
+  color: #000;
+}
+
+#cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  width: 250px;
+  height: 350px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 23px;
+  font-weight: bold;
+  padding: 20px;
+  border: 3px solid #000;
+  border-radius: 12px;
+  background-color: #fff;
+  color: #000;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.black-card {
+  background-color: #000;
+  color: #fff;
+}
+
+.card span {
+  text-decoration: underline;
+}
+
+#card-display button {
+  margin-top: 0px;
+  margin-bottom: 60px;
+  padding: 10px 20px;
+  background-color: #f8f8f8;
+  border: 2px solid #000;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#card-display button:hover {
+  background-color: #d8d8d8;
+}
+
+/* Footer styling */
+.credit-message {
+  font-size: 14px;
+  color: #666;
+  padding: 10px 0;
+  text-align: center;
+  background-color: #ffffff00;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  margin-top: 40px;
+}
+
+.credit-message a {
+  color: #F7931A;
+  text-decoration: none;
+}
+
+.credit-message a:hover {
+  color: #c56c00;
+  text-decoration: underline;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #131313;
+  color: #fff;
+}
+
+body.dark-mode #main-menu button {
+  background-color: #020202;
+  color: #ffffff;
+  border: 2px solid #000;
+}
+
+body.dark-mode #main-menu .draw-white-cards {
+  background-color: #bfbfbf;
+  color: #000;
+}
+
+body.dark-mode .card {
+  background-color: #bfbfbf;
+  color: #000;
+}
+
+body.dark-mode .black-card {
+  background-color: #000;
+  color: #fff;
+}
+
+body.dark-mode #card-display button {
+  background-color: #bfbfbf;
+  border: 2px solid #000;
+}
+
+/* Light Mode (default) */
+body {
+  background-color: #f4f4f4;
+  color: #000;
+}
+
+#main-menu button {
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #000;
+}
+
+#main-menu .draw-white-cards {
+  background-color: #fff;
+  color: #000;
+}
+
+.card {
+  background-color: #fff;
+  color: #000;
+  border: 3px solid #000;
+}
+
+.black-card {
+  background-color: #000;
+  color: #fff;
+}
+
+#card-display button {
+  background-color: #f8f8f8;
+  border: 2px solid #000;
+}
+
+/* Toggle Button Styling */
+#mode-toggle {
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#toggle-button {
+  background-color: transparent;
+  color: inherit;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
