@@ -181,7 +181,7 @@ body.dark-mode #toggle-button:hover {
 
 /* Dark Mode Styles */
 body.dark-mode {
-  background-color: #333;
+  background-color: #131313;
   color: white;
 }
 
