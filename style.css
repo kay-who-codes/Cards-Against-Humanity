@@ -158,27 +158,6 @@ body.dark-mode #toggle-button:hover {
   box-shadow: 0 4px 6px rgba(255, 255, 255, 0.2);
 }
 
-/* Footer styling */
-.credit-message {
-  font-size: 14px;
-  color: grey;
-  padding: 10px 0;
-  text-align: center;
-  background-color: transparent;
-  width: 100%;
-  margin-top: 40px;
-}
-
-.credit-message a {
-  color: #F7931A;
-  text-decoration: none;
-}
-
-.credit-message a:hover {
-  color: #c56c00;
-  text-decoration: underline;
-}
-
 /* Dark Mode Styles */
 body.dark-mode {
   background-color: #131313;
@@ -279,4 +258,25 @@ body.dark-mode #card-display button:hover {
   #toggle-button {
     font-size: 12px;
   }
+}
+
+/* Footer styling */
+.credit-message {
+  font-size: 14px;
+  color: grey;
+  padding: 10px 0;
+  text-align: center;
+  background-color: transparent;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.credit-message a {
+  color: #F7931A;
+  text-decoration: none;
+}
+
+.credit-message a:hover {
+  color: #c56c00;
+  text-decoration: underline;
 }
