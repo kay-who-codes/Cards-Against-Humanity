@@ -2,7 +2,7 @@
 
 Play Cards Against Humanity for free in your browser.
 
-![App Image](Non-Game%20Files/App%20Image.png)
+[![App Image](Non-Game%20Files/App%20Image.png)](https://kay-who-codes.github.io/Random-Numbers/)
 
 ## Features
 
