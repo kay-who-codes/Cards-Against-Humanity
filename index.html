@@ -4,17 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>⬛ Cards Against Humanity ⬜</title>
+
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <link rel="stylesheet" href="header.css">
+
+  </head>
+
+  <body>
+  <!-- Header Bar -->
+  <div id="header"></div>
 
   <!-- Main Menu -->
   <div class="main-menu" id="main-menu">
-    <h1>Cards Against Humanity</h1>
-
-    <!-- Draw Buttons -->
-    <button class="draw-black-card" id="draw-black-card" onclick="drawBlackCard()">Draw Black Card</button>
-    <button class="draw-white-cards" id="draw-white-cards" onclick="drawWhiteCards()">Draw White Cards</button>
+    <h1 class="H1">Cards Against Humanity</h1>
+  
+    <!-- Button Container -->
+    <div class="button-container">
+      <button class="draw-black-card" id="draw-black-card" onclick="drawBlackCard()">Draw Black Card</button>
+      <button class="draw-white-cards" id="draw-white-cards" onclick="drawWhiteCards()">Draw White Cards</button>
+    </div>
 
     <!-- Deck Selection Dropdown -->
     <br>
@@ -42,6 +51,7 @@
   Created by <a href="https://linktr.ee/kaywhocreates" target="_blank">Kay 🧡</a>
 </footer>
 
-  <script src="script.js"></script>
+<script src="script.js" defer></script>
+<script src="header.js" defer></script>  
 </body>
 </html>
