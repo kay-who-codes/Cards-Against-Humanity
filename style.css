@@ -177,7 +177,7 @@ body.dark-mode #main-menu button {
 }
 
 body.dark-mode #main-menu .draw-white-cards {
-  background-color: lightgrey;
+  background-color: white;
   color: black;
 }
 
