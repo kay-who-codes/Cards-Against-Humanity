@@ -1,57 +1,1700 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>⬛ Cards Against Humanity ⬜</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="header.css">
+<!-- App icons -->
+<link rel="icon" type="image/x-icon" href="AppFiles/Icons/favicon.ico">
+<link rel="icon" type="image/png" sizes="192x192" href="AppFiles/Logos/AppIcon192px.png">
+<link rel="icon" type="image/png" sizes="512x512" href="AppFiles/Logos/AppIcon512px.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#1c1712">
+<!-- End app icons -->
 
-  </head>
+<title>Cards Against Humanity</title>
 
-  <body>
-  <!-- Header Bar -->
-  <div id="header"></div>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+  /* ==========================================================
+     Tokens
+     Paper cardstock, table-lamp warmth, ink black. The two
+     typefaces mirror the physical deck: a heavy condensed
+     display face for card text/headlines, a plain workhorse
+     sans for interface chrome.
+  ========================================================== */
+  :root {
+    --paper: #efe7d6;
+    --paper-dim: #e3dac5;
+    --ink: #1c1712;
+    --ink-soft: #55493d;
+    --crimson: #b9331f;
+    --crimson-dark: #8f2417;
+    --pine: #435a45;
+    --card-white: #fffdf6;
+    --rule: rgba(28, 23, 18, 0.16);
+    --shadow-ink: rgba(28, 23, 18, 0.28);
+    --font-display: 'Big Shoulders Display', sans-serif;
+    --font-body: 'Source Sans 3', sans-serif;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    font-family: var(--font-body);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--paper);
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(28,23,18,0.05) 1px, transparent 0);
+    background-size: 22px 22px;
+    text-align: center;
+    color: var(--ink);
+    justify-content: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  h1 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 52px;
+    letter-spacing: -0.01em;
+    line-height: 0.95;
+    text-transform: uppercase;
+    margin: 20px 0 4px;
+  }
+
+  h1::after {
+    content: '';
+    display: block;
+    width: 64px;
+    height: 5px;
+    background-color: var(--crimson);
+    margin: 12px auto 0;
+    border-radius: 3px;
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 26px;
+    letter-spacing: 0.01em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  #main-menu, #card-display, #setup-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .main-menu {
+    padding-top: 24px;
+  }
+
+  #main-menu {
+    justify-content: center;
+    gap: 6px;
+  }
+
+  /* ---------- Player badge / role banner ---------- */
+  .player-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 18px;
+    padding: 14px 22px;
+    border-radius: 4px;
+    background-color: var(--card-white);
+    border: 1px solid var(--rule);
+    box-shadow: 0 2px 0 var(--rule);
+  }
+
+  body.dark-mode .player-banner {
+    background-color: #262019;
+    border-color: rgba(255,255,255,0.12);
+    box-shadow: 0 2px 0 rgba(255,255,255,0.08);
+  }
+
+  .player-banner .who {
+    font-size: 13px;
+    letter-spacing: 0.03em;
+    color: var(--ink-soft);
+  }
+
+  body.dark-mode .player-banner .who {
+    color: #b9ae9c;
+  }
+
+  .role-pill {
+    display: inline-block;
+    padding: 5px 16px;
+    border-radius: 3px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: 0.02em;
+  }
+
+  .role-pill.czar {
+    background-color: var(--crimson);
+    color: var(--card-white);
+  }
+
+  body.dark-mode .role-pill.czar {
+    background-color: var(--crimson);
+    color: white;
+  }
+
+  .role-pill.player {
+    background-color: transparent;
+    color: var(--pine);
+    border: 2px solid var(--pine);
+  }
+
+  body.dark-mode .role-pill.player {
+    color: #8fb491;
+    border-color: #8fb491;
+  }
+
+  .round-controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 2px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .link-button {
+    background: none;
+    border: none;
+    color: var(--crimson);
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    padding: 2px 4px;
+  }
+
+  .link-button:hover {
+    color: var(--crimson-dark);
+  }
+
+  body.dark-mode .link-button {
+    color: #e0785f;
+  }
+
+  .small-button {
+    padding: 7px 14px;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: var(--font-body);
+    border-radius: 3px;
+    border: 2px solid var(--ink);
+    background-color: var(--card-white);
+    color: var(--ink);
+    cursor: pointer;
+    transition: transform 0.12s ease, background-color 0.2s ease;
+  }
+
+  .small-button:hover {
+    transform: translateY(-1px);
+    background-color: var(--paper-dim);
+  }
+
+  body.dark-mode .small-button {
+    background-color: #262019;
+    color: #f1ead9;
+    border: 2px solid #f1ead9;
+  }
+
+  body.dark-mode .small-button:hover {
+    background-color: #322a20;
+  }
+
+  /* ---------- Buttons ---------- */
+  .button-container {
+    display: flex;
+    gap: 14px;
+  }
+
+  #main-menu button.draw-black-card,
+  #main-menu button.draw-white-cards {
+    width: 200px;
+    height: 200px;
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    margin: 20px 5px;
+    cursor: pointer;
+    border-radius: 18px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.2s ease;
+  }
+
+  #main-menu .draw-black-card {
+    background-color: var(--ink);
+    color: var(--paper);
+    border: 2px solid var(--ink);
+    box-shadow: 6px 6px 0 var(--crimson);
+  }
+
+  #main-menu .draw-white-cards {
+    background-color: #ffffff;
+    color: var(--ink);
+    border: 2px solid var(--ink);
+    box-shadow: 6px 6px 0 var(--pine);
+  }
+
+  #main-menu button:hover:not(:disabled) {
+    transform: translate(-3px, -3px);
+  }
+
+  #main-menu .draw-black-card:hover:not(:disabled) {
+    box-shadow: 9px 9px 0 var(--crimson);
+  }
+
+  #main-menu .draw-white-cards:hover:not(:disabled) {
+    box-shadow: 9px 9px 0 var(--pine);
+  }
+
+  #main-menu button:active:not(:disabled) {
+    transform: translate(0, 0);
+    box-shadow: 3px 3px 0 var(--crimson);
+  }
+
+  #main-menu button:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+
+  #main-menu button:focus-visible,
+  #card-display button:focus-visible,
+  #toggle-button:focus-visible,
+  .small-button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  .pack-checkbox input:focus-visible {
+    outline: 3px solid var(--crimson);
+    outline-offset: 2px;
+  }
+
+  .role-hint {
+    font-size: 13px;
+    color: var(--ink-soft);
+    max-width: 260px;
+    margin: -6px 0 8px;
+  }
+
+  body.dark-mode .role-hint {
+    color: #b9ae9c;
+  }
+
+  /* ---------- Deck selection ---------- */
+  .select-decks-text {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  .select-decks-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .deck-select-actions {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+
+  .deck-hint {
+    font-size: 12px;
+    color: var(--ink-soft);
+    max-width: 260px;
+  }
+
+  #pack-selection {
+    width: 100%;
+    max-width: 320px;
+    max-height: 220px;
+    overflow-y: auto;
+    padding: 10px;
+    border-radius: 4px;
+    border: 2px solid var(--ink);
+    background-color: var(--card-white);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  body.dark-mode #pack-selection {
+    background-color: #201a14;
+    border-color: #f1ead9;
+  }
+
+  .pack-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 6px;
+    border-radius: 3px;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .pack-checkbox:hover {
+    background-color: var(--paper-dim);
+  }
+
+  body.dark-mode .pack-checkbox:hover {
+    background-color: #2c2419;
+  }
+
+  .pack-checkbox input {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    accent-color: var(--crimson);
+    cursor: pointer;
+  }
+
+  .pack-checkbox span {
+    font-size: 15px;
+  }
+
+  /* ---------- Hand size control ---------- */
+  .hand-size-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 18px;
+  }
+
+  .hand-size-row label {
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  #hand-size {
+    width: 70px;
+    padding: 6px 8px;
+    font-size: 16px;
+    font-family: var(--font-body);
+    border: 2px solid var(--ink);
+    border-radius: 4px;
+    text-align: center;
+    background-color: var(--card-white);
+    color: var(--ink);
+  }
+
+  body.dark-mode #hand-size {
+    background-color: #201a14;
+    color: #f1ead9;
+    border-color: #f1ead9;
+  }
+
+  .status-message {
+    min-height: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--crimson-dark);
+    margin-top: 12px;
+    max-width: 320px;
+  }
+
+  .status-message.info {
+    color: var(--ink-soft);
+    font-weight: 400;
+  }
+
+  body.dark-mode .status-message.info {
+    color: #b9ae9c;
+  }
+
+  /* ---------- Setup screen ---------- */
+  #setup-screen {
+    gap: 14px;
+    padding-top: 60px;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  .setup-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 220px;
+    text-align: left;
+  }
+
+  .setup-field label {
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  .setup-field input,
+  .setup-field select {
+    padding: 8px 10px;
+    font-size: 16px;
+    font-family: var(--font-body);
+    border: 2px solid var(--ink);
+    border-radius: 4px;
+    background-color: var(--card-white);
+    color: var(--ink);
+  }
+
+  body.dark-mode .setup-field input,
+  body.dark-mode .setup-field select {
+    background-color: #201a14;
+    color: #f1ead9;
+    border-color: #f1ead9;
+  }
+
+  .setup-explainer {
+    font-size: 13px;
+    color: var(--ink-soft);
+    max-width: 260px;
+  }
+
+  body.dark-mode .setup-explainer {
+    color: #b9ae9c;
+  }
+
+  #setup-form button[type="submit"] {
+    margin-top: 8px;
+    padding: 11px 26px;
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    background-color: var(--crimson);
+    color: var(--card-white);
+    border: 2px solid var(--crimson);
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 4px 4px 0 var(--ink);
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+  }
+
+  #setup-form button[type="submit"]:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--ink);
+  }
+
+  body.dark-mode #setup-form button[type="submit"] {
+    box-shadow: 4px 4px 0 #f1ead9;
+  }
+
+  body.dark-mode #setup-form button[type="submit"]:hover {
+    box-shadow: 6px 6px 0 #f1ead9;
+  }
+
+  .setup-reset-row {
+    margin-top: 4px;
+  }
+
+  /* ---------- Drawn cards ---------- */
+  #cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    padding: 20px;
+  }
+
+  .card {
+    width: 250px;
+    height: 350px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-family: 'Arial', sans-serif;
+    font-size: 23px;
+    font-weight: bold;
+    line-height: 1.3;
+    padding: 20px;
+    border: 3px solid var(--ink);
+    border-radius: 10px;
+    background-color: var(--card-white);
+    color: var(--ink);
+    text-align: left;
+    box-shadow: 5px 5px 0 var(--shadow-ink);
+    animation: dealIn 0.35s ease backwards;
+  }
+
+  @keyframes dealIn {
+    from {
+      opacity: 0;
+      transform: translateY(16px) scale(0.96) rotate(0deg);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1) rotate(0deg);
+    }
+  }
+
+  .black-card {
+    background-color: var(--ink);
+    color: var(--paper);
+    border-color: var(--ink);
+  }
+
+  /* ---------- Selectable hand cards ---------- */
+  .card.selectable {
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  }
+
+  .card.selectable:hover {
+    transform: translateY(-5px);
+    box-shadow: 7px 10px 0 var(--shadow-ink);
+  }
+
+  .card.selectable.selected {
+    border-color: var(--crimson);
+    border-width: 4px;
+    box-shadow: 6px 9px 0 var(--crimson);
+    transform: translateY(-5px);
+  }
+
+  .card-select-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 2px solid var(--ink);
+    background-color: var(--card-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 700;
+    color: transparent;
+  }
+
+  .card.selectable.selected .card-select-badge {
+    background-color: var(--crimson);
+    border-color: var(--crimson);
+    color: white;
+  }
+
+  /* ---------- Selection bar ---------- */
+  .selection-bar,
+  .black-card-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin: 6px 0 12px;
+  }
+
+  .selection-count {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--ink-soft);
+  }
+
+  body.dark-mode .selection-count {
+    color: #b9ae9c;
+  }
+
+  .reveal-button {
+    padding: 11px 22px;
+    font-family: var(--font-display);
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    background-color: var(--crimson);
+    color: white;
+    border: 2px solid var(--crimson);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.12s ease, opacity 0.2s ease;
+  }
+
+  .reveal-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+  }
+
+  .reveal-button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  /* ---------- Full-screen reveal ---------- */
+  #fullscreen-reveal {
+    position: fixed;
+    inset: 0;
+    background-color: var(--ink);
+    color: white;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    gap: 24px;
+  }
+
+  #fullscreen-reveal .fullscreen-cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    max-width: 100%;
+    max-height: 78vh;
+    overflow-y: auto;
+    /* overflow-y:auto forces overflow-x to compute to auto too, which
+       clips box-shadow at the padding edge. Padding here gives the
+       shadow room so it isn't cut off on outer/last cards. */
+    padding: 10px 14px 14px 10px;
+  }
+
+  #fullscreen-reveal .fullscreen-card {
+    background-color: var(--card-white);
+    color: var(--ink);
+    border-radius: 12px;
+    padding: 30px;
+    font-family: 'Arial', sans-serif;
+    font-size: clamp(22px, 4.2vw, 34px);
+    font-weight: bold;
+    line-height: 1.3;
+    text-align: left;
+    width: min(90vw, 420px);
+    min-height: 220px;
+    display: flex;
+    align-items: flex-start;
+    box-shadow: 6px 6px 0 var(--crimson);
+  }
+
+  #fullscreen-reveal .fullscreen-card.fullscreen-black-card {
+    background-color: var(--ink);
+    color: var(--paper);
+    box-shadow: 6px 6px 0 var(--pine);
+  }
+
+  #fullscreen-reveal .fullscreen-close {
+    padding: 12px 28px;
+    font-family: var(--font-display);
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    background-color: var(--paper);
+    color: var(--ink);
+    border: 2px solid var(--paper);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.12s ease;
+  }
+
+  #fullscreen-reveal .fullscreen-close:hover {
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 480px) {
+    #fullscreen-reveal .fullscreen-card {
+      padding: 20px;
+      min-height: 160px;
+    }
+  }
+
+  #card-display button#back-to-menu {
+    margin: 20px 0;
+    padding: 10px 22px;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 14px;
+    background-color: var(--card-white);
+    border: 2px solid var(--ink);
+    border-radius: 4px;
+    color: var(--ink);
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.12s ease;
+  }
+
+  #card-display button#back-to-menu:hover {
+    background-color: var(--paper-dim);
+    transform: translateY(-1px);
+  }
+
+  /* ---------- Light/Dark Mode Toggle ---------- */
+  #mode-toggle {
+    margin: 20px 0;
+  }
+
+  #toggle-button {
+    padding: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 999px;
+    transition: transform 0.15s ease;
+  }
+
+  #toggle-button:hover {
+    transform: scale(1.04);
+  }
+
+  .toggle-track {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 68px;
+    height: 34px;
+    border-radius: 999px;
+    background-color: var(--ink);
+    border: 2px solid var(--ink);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+
+  body.dark-mode .toggle-track {
+    background-color: #322a20;
+    border-color: #f1ead9;
+  }
+
+  .toggle-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 15px;
+    line-height: 1;
+    opacity: 0.9;
+  }
+
+  .toggle-icon-sun {
+    left: 7px;
+  }
+
+  .toggle-icon-moon {
+    right: 7px;
+  }
+
+  .toggle-thumb {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: var(--card-white);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    transition: transform 0.25s ease, background-color 0.3s ease;
+  }
+
+  body.dark-mode .toggle-thumb {
+    transform: translateX(34px);
+    background-color: #f1ead9;
+  }
+
+  /* ---------- Dark Mode base ---------- */
+  body.dark-mode {
+    background-color: #161210;
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0);
+    background-size: 22px 22px;
+    color: #f1ead9;
+  }
+
+  body.dark-mode #main-menu .draw-black-card {
+    background-color: #060504;
+    color: #f1ead9;
+    border: 2px solid #f1ead9;
+    box-shadow: 6px 6px 0 var(--crimson);
+  }
+
+  body.dark-mode #main-menu .draw-white-cards {
+    background-color: #ffffff;
+    color: var(--ink);
+    border: 2px solid #f1ead9;
+    box-shadow: 6px 6px 0 #8fb491;
+  }
+
+  body.dark-mode .deck-hint {
+    color: #b9ae9c;
+  }
+
+  /* Cards keep their real-world colors regardless of theme: white cards
+     are always white, black cards are always black. */
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 768px) {
+    body {
+      justify-content: flex-start;
+      padding: 20px;
+      background-size: 18px 18px;
+    }
+
+    h1 {
+      font-size: 38px;
+    }
+
+    #main-menu button.draw-black-card,
+    #main-menu button.draw-white-cards {
+      width: 160px;
+      height: 160px;
+      font-size: 17px;
+      padding: 15px;
+    }
+
+    #pack-selection {
+      max-height: 180px;
+    }
+
+    .card {
+      width: 90%;
+      height: 200px;
+      font-size: 22px;
+      padding: 16px;
+    }
+
+    #card-display button#back-to-menu {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    #toggle-button {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .button-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #main-menu button.draw-black-card,
+    #main-menu button.draw-white-cards {
+      font-size: 15px;
+      padding: 10px;
+      width: 140px;
+      height: 140px;
+    }
+
+    .card {
+      font-size: 18px;
+    }
+
+    #pack-selection {
+      max-height: 150px;
+    }
+
+    #toggle-button {
+      font-size: 12px;
+    }
+  }
+
+  /* ---------- Footer ---------- */
+  .credit-message {
+    font-size: 13px;
+    color: var(--ink-soft);
+    padding: 10px 0;
+    text-align: center;
+    background-color: transparent;
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  body.dark-mode .credit-message {
+    color: #b9ae9c;
+  }
+
+  .credit-message a {
+    color: var(--crimson);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .credit-message a:hover {
+    color: var(--crimson-dark);
+    text-decoration: underline;
+  }
+
+  body.dark-mode .credit-message a {
+    color: #e0785f;
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+</style>
+</head>
+
+<body>
+
+  <!-- Setup Screen: each player identifies player count + their own seat -->
+  <div id="setup-screen">
+    <h1>Cards Against Humanity</h1>
+    <p class="setup-explainer">
+      Everyone's playing on their own device. Enter how many players are in the game and
+      which seat you are — the app will work out who's Card Czar each round.
+    </p>
+    <form id="setup-form">
+      <div class="setup-field">
+        <label for="num-players">How many players?</label>
+        <input type="number" id="num-players" min="3" max="20" value="4" required>
+      </div>
+      <div class="setup-field">
+        <label for="my-position">Which player are you?</label>
+        <select id="my-position"></select>
+      </div>
+      <button type="submit">Start Playing</button>
+    </form>
+    <div class="setup-reset-row">
+      <button type="button" class="link-button" id="full-reset-button">Reset everything</button>
+    </div>
+  </div>
 
   <!-- Main Menu -->
-  <div class="main-menu" id="main-menu">
-    <h1 class="H1">Cards Against Humanity</h1>
-  
-    <!-- Button Container -->
-    <div class="button-container">
-      <button class="draw-black-card" id="draw-black-card" onclick="drawBlackCard()">Draw Black Card</button>
-      <button class="draw-white-cards" id="draw-white-cards" onclick="drawWhiteCards()">Draw White Cards</button>
+  <div class="main-menu hidden" id="main-menu">
+    <h1>Cards Against Humanity</h1>
+
+    <div class="player-banner">
+      <span class="who" id="who-am-i"></span>
+      <span class="role-pill" id="role-pill"></span>
+      <div class="round-controls">
+        <button class="small-button" id="next-round-button">Next Round ▶</button>
+        <button class="link-button" id="change-setup-button">Change players</button>
+      </div>
     </div>
 
-    <!-- Deck Selection Dropdown -->
-    <br>
-    <label class="select-decks-text"for="pack-selection">Select Decks:</label>
-    <br>
-    <select class="pack-selection" id="pack-selection" multiple>
-    </select>
+    <!-- Button Container -->
+    <div class="button-container">
+      <button class="draw-black-card" id="draw-black-card" disabled>Draw Black Card</button>
+      <button class="draw-white-cards" id="draw-white-cards" disabled>Draw White Cards</button>
+    </div>
+    <p class="role-hint" id="role-hint"></p>
+
+    <!-- Deck Selection -->
+    <div class="select-decks-row">
+      <span class="select-decks-text" id="pack-selection-label">Select Decks:</span>
+    </div>
+    <div class="deck-select-actions">
+      <button class="small-button" id="select-all-decks">Select All</button>
+      <button class="small-button" id="select-none-decks">Select None</button>
+    </div>
+    <div id="pack-selection" role="group" aria-labelledby="pack-selection-label" aria-describedby="deck-hint"></div>
+    <p class="deck-hint" id="deck-hint">Tap a deck to include or exclude it.</p>
+
+    <!-- Hand size control -->
+    <div class="hand-size-row">
+      <label for="hand-size">White cards to draw:</label>
+      <input type="number" id="hand-size" min="1" max="20" value="7">
+    </div>
+
+    <p class="status-message" id="status-message" role="status" aria-live="polite"></p>
   </div>
 
   <!-- Card Display -->
   <div id="card-display" style="display: none;">
-    <h2>Drawn Cards</h2>
+    <h2 id="card-display-heading" aria-live="polite">Drawn Cards</h2>
     <div id="cards-container"></div>
-    <button onclick="returnToMenu()">Back to Menu</button>
+    <div class="selection-bar hidden" id="selection-bar">
+      <span class="selection-count" id="selection-count">0 selected</span>
+      <button class="reveal-button" id="reveal-selected-button" disabled>Show Full-Screen</button>
+    </div>
+    <div class="black-card-bar hidden" id="black-card-bar">
+      <button class="reveal-button" id="reveal-black-button">Show Full-Screen</button>
+    </div>
+    <button id="back-to-menu">Back to Menu</button>
   </div>
 
+  <!-- Full-screen reveal of selected white cards -->
+  <div id="fullscreen-reveal" class="hidden" role="dialog" aria-modal="true" aria-label="Selected cards">
+    <div class="fullscreen-cards" id="fullscreen-cards"></div>
+    <button class="fullscreen-close" id="fullscreen-close">Close</button>
+  </div>
 
+  <footer class="credit-message">
+    <!-- Light Mode / Dark Mode Toggle -->
+    <div id="mode-toggle">
+      <button class="mode-toggle" id="toggle-button" aria-pressed="false">
+        <span class="toggle-track" aria-hidden="true">
+          <span class="toggle-icon toggle-icon-sun">☀️</span>
+          <span class="toggle-icon toggle-icon-moon">🌙</span>
+          <span class="toggle-thumb"></span>
+        </span>
+        <span class="visually-hidden">Toggle light or dark mode</span>
+      </button>
+    </div>
+    Inspired by <a href="https://www.cardsagainsthumanity.com/" target="_blank" rel="noopener">Cards Against Humanity</a>,
+    Created by <a href="https://linktr.ee/kaywhocreates" target="_blank" rel="noopener">Kay 🧡</a>
+  </footer>
 
-<footer class="credit-message">
-  <!-- Light Mode / Dark Mode Toggle -->
-<div id="mode-toggle">
-  <button class="mode-toggle" id="toggle-button" onclick="toggleMode()">☀️/🌙</button>
-</div>
-  Inspired by <a href="https://www.cardsagainsthumanity.com/" target="_blank">Cards Against Humanity</a>,
-  Created by <a href="https://linktr.ee/kaywhocreates" target="_blank">Kay 🧡</a>
-</footer>
+<script>
+(() => {
+  const STORAGE_KEYS = {
+    mode: 'mode',
+    numPlayers: 'cah_numPlayers',
+    myPosition: 'cah_myPosition',
+    round: 'cah_round',
+    handSize: 'cah_handSize',
+    packs: 'cah_selectedPacks'
+  };
 
-<script src="script.js" defer></script>
-<script src="header.js" defer></script>  
+  let cardsData = [];
+  // Memoized lookup: Map<packName, { prompts: [...], responses: [...] }>
+  // Built once when cards load so draws never re-filter the whole dataset.
+  let packIndex = new Map();
+
+  // Tracks which card indices (within a pack's prompts/responses arrays) have
+  // already been drawn this session, so the same card doesn't repeat until
+  // its pack is exhausted and reshuffled. Keyed as `${pack}|${kind}`.
+  let drawnTracker = new Map();
+
+  const setupScreen = document.getElementById('setup-screen');
+  const setupForm = document.getElementById('setup-form');
+  const numPlayersInput = document.getElementById('num-players');
+  const myPositionSelect = document.getElementById('my-position');
+  const fullResetButton = document.getElementById('full-reset-button');
+
+  const mainMenu = document.getElementById('main-menu');
+  const whoAmI = document.getElementById('who-am-i');
+  const rolePill = document.getElementById('role-pill');
+  const roleHint = document.getElementById('role-hint');
+  const nextRoundButton = document.getElementById('next-round-button');
+  const changeSetupButton = document.getElementById('change-setup-button');
+
+  const blackBtn = document.getElementById('draw-black-card');
+  const whiteBtn = document.getElementById('draw-white-cards');
+  const packSelect = document.getElementById('pack-selection');
+  const selectAllBtn = document.getElementById('select-all-decks');
+  const selectNoneBtn = document.getElementById('select-none-decks');
+  const handSizeInput = document.getElementById('hand-size');
+  const statusMessage = document.getElementById('status-message');
+
+  const cardDisplay = document.getElementById('card-display');
+  const cardsContainer = document.getElementById('cards-container');
+  const cardDisplayHeading = document.getElementById('card-display-heading');
+  const selectionBar = document.getElementById('selection-bar');
+  const selectionCount = document.getElementById('selection-count');
+  const revealSelectedButton = document.getElementById('reveal-selected-button');
+  const blackCardBar = document.getElementById('black-card-bar');
+  const revealBlackButton = document.getElementById('reveal-black-button');
+
+  const fullscreenReveal = document.getElementById('fullscreen-reveal');
+  const fullscreenCards = document.getElementById('fullscreen-cards');
+  const fullscreenClose = document.getElementById('fullscreen-close');
+
+  const toggleButton = document.getElementById('toggle-button');
+
+  // State for the currently displayed hand of white cards, so cards can be
+  // multi-selected and then shown full-screen for the table to read.
+  let currentHand = [];
+  let selectedIndices = new Set();
+  let isHandMode = false;
+
+  // Flip sound is optional — if flip.mp3 isn't present alongside this file,
+  // playback errors are swallowed instead of breaking the buttons.
+  const flipSound = new Audio('flip.mp3');
+  function playFlipSound() {
+    flipSound.currentTime = 0;
+    flipSound.play().catch(() => {});
+  }
+
+  function setStatus(message, isInfo) {
+    statusMessage.textContent = message || '';
+    statusMessage.classList.toggle('info', Boolean(isInfo));
+  }
+
+  /* ============================================================
+     Dark mode: explicit saved preference wins; otherwise fall
+     back to the OS-level prefers-color-scheme, and keep following
+     it live until the user picks a mode themselves.
+  ============================================================ */
+  const colorSchemeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+  function applyMode(isDark) {
+    document.body.classList.toggle('dark-mode', isDark);
+    toggleButton.setAttribute('aria-pressed', String(isDark));
+  }
+
+  function initMode() {
+    const savedMode = localStorage.getItem(STORAGE_KEYS.mode);
+    if (savedMode === 'dark' || savedMode === 'light') {
+      applyMode(savedMode === 'dark');
+    } else {
+      applyMode(colorSchemeQuery.matches);
+    }
+  }
+
+  colorSchemeQuery.addEventListener('change', (e) => {
+    // Only auto-follow the OS if the user hasn't explicitly chosen a mode.
+    if (!localStorage.getItem(STORAGE_KEYS.mode)) {
+      applyMode(e.matches);
+    }
+  });
+
+  function toggleMode() {
+    const isDark = !document.body.classList.contains('dark-mode');
+    applyMode(isDark);
+    localStorage.setItem(STORAGE_KEYS.mode, isDark ? 'dark' : 'light');
+  }
+
+  /* ============================================================
+     Card loading + memoized pack index
+  ============================================================ */
+  async function loadCards() {
+    setStatus('Loading cards…', true);
+    try {
+      const response = await fetch('cards.json');
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      cardsData = await response.json();
+      buildPackIndex();
+      populatePackSelection();
+      blackBtn.disabled = false;
+      whiteBtn.disabled = false;
+      setStatus('');
+    } catch (error) {
+      console.error('Error loading cards:', error);
+      setStatus('Could not load cards.json. Make sure it sits in the same folder as this page.');
+    }
+  }
+
+  // Build the pack lookup once per load instead of filtering cardsData on every draw.
+  function buildPackIndex() {
+    packIndex = new Map();
+    for (const card of cardsData) {
+      if (!packIndex.has(card.Pack)) {
+        packIndex.set(card.Pack, { prompts: [], responses: [] });
+      }
+      const bucket = packIndex.get(card.Pack);
+      if (card.Type === 'Prompt') {
+        bucket.prompts.push(card);
+      } else if (card.Type === 'Response') {
+        bucket.responses.push(card);
+      }
+    }
+    drawnTracker = new Map();
+  }
+
+  function getCardsForPacks(selectedPacks, kind) {
+    // kind: 'prompts' | 'responses'
+    const result = [];
+    for (const pack of selectedPacks) {
+      const bucket = packIndex.get(pack);
+      if (bucket) result.push(...bucket[kind]);
+    }
+    return result;
+  }
+
+  // Draws `count` cards from the given packs without repeating a card until
+  // every card of that kind across the selected packs has been seen once.
+  // Returns { cards, reshuffled } where reshuffled indicates the pool ran out
+  // and was refilled mid-draw.
+  function drawWithoutRepeats(selectedPacks, kind, count) {
+    const trackerKey = selectedPacks.slice().sort().join(',') + '|' + kind;
+    let seen = drawnTracker.get(trackerKey);
+    if (!seen) {
+      seen = new Set();
+      drawnTracker.set(trackerKey, seen);
+    }
+
+    const allCards = getCardsForPacks(selectedPacks, kind);
+    const cardKey = (card) => `${card.Pack}|${card.Type}|${card.Text}`;
+
+    let available = allCards.filter(card => !seen.has(cardKey(card)));
+    let reshuffled = false;
+
+    if (available.length < count) {
+      // Pool exhausted (or too small) — reshuffle by clearing what's been seen,
+      // but keep any cards already picked in this draw excluded so this single
+      // draw still has no internal duplicates.
+      reshuffled = seen.size > 0;
+      seen.clear();
+      available = allCards.slice();
+    }
+
+    const picked = shuffle(available).slice(0, count);
+    picked.forEach(card => seen.add(cardKey(card)));
+
+    return { cards: picked, reshuffled };
+  }
+
+  function populatePackSelection() {
+    const uniquePacks = [...packIndex.keys()].sort();
+    const previouslySelected = new Set(JSON.parse(localStorage.getItem(STORAGE_KEYS.packs) || '[]'));
+
+    packSelect.innerHTML = '';
+    uniquePacks.forEach(pack => {
+      const isSelected = previouslySelected.size > 0
+        ? previouslySelected.has(pack)
+        : pack === 'Base Game';
+
+      const label = document.createElement('label');
+      label.className = 'pack-checkbox';
+
+      const input = document.createElement('input');
+      input.type = 'checkbox';
+      input.value = pack;
+      input.checked = isSelected;
+      input.addEventListener('change', () => {
+        persistSelectedPacks();
+        setStatus('');
+      });
+
+      const span = document.createElement('span');
+      span.textContent = pack;
+
+      label.appendChild(input);
+      label.appendChild(span);
+      packSelect.appendChild(label);
+    });
+
+    // Fallback: if nothing matched (e.g. saved packs no longer exist) select the first pack.
+    if (previouslySelected.size > 0 && getSelectedPacks().length === 0 && packSelect.children.length > 0) {
+      packSelect.querySelector('input').checked = true;
+    }
+
+    persistSelectedPacks();
+  }
+
+  function getSelectedPacks() {
+    return Array.from(packSelect.querySelectorAll('input:checked')).map(input => input.value);
+  }
+
+  function persistSelectedPacks() {
+    localStorage.setItem(STORAGE_KEYS.packs, JSON.stringify(getSelectedPacks()));
+  }
+
+  selectAllBtn.addEventListener('click', () => {
+    packSelect.querySelectorAll('input').forEach(input => { input.checked = true; });
+    persistSelectedPacks();
+    setStatus('');
+  });
+
+  selectNoneBtn.addEventListener('click', () => {
+    packSelect.querySelectorAll('input').forEach(input => { input.checked = false; });
+    persistSelectedPacks();
+    setStatus('');
+  });
+
+  /* ============================================================
+     Hand size control
+  ============================================================ */
+  function getHandSize() {
+    let size = parseInt(handSizeInput.value, 10);
+    if (!Number.isFinite(size) || size < 1) size = 1;
+    if (size > 20) size = 20;
+    return size;
+  }
+
+  function clampHandSizeInput() {
+    const size = getHandSize();
+    if (String(size) !== handSizeInput.value) {
+      handSizeInput.value = size;
+    }
+    localStorage.setItem(STORAGE_KEYS.handSize, String(size));
+  }
+
+  handSizeInput.addEventListener('input', clampHandSizeInput);
+  handSizeInput.addEventListener('change', clampHandSizeInput);
+
+  /* ============================================================
+     Drawing cards
+  ============================================================ */
+  function shuffle(array) {
+    const result = array.slice();
+    for (let i = result.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [result[i], result[j]] = [result[j], result[i]];
+    }
+    return result;
+  }
+
+  function reduceUnderscores(text) {
+    return text.replace(/_+/g, match => '_'.repeat(match.length));
+  }
+
+  function drawBlackCard() {
+    const selectedPacks = getSelectedPacks();
+    if (selectedPacks.length === 0) {
+      setStatus('Select at least one deck first.');
+      return;
+    }
+
+    if (getCardsForPacks(selectedPacks, 'prompts').length === 0) {
+      setStatus('No black cards found in the selected decks.');
+      return;
+    }
+
+    playFlipSound();
+    const { cards, reshuffled } = drawWithoutRepeats(selectedPacks, 'prompts', 1);
+    displayCards(cards, 'Black Card');
+    setStatus(reshuffled ? "You've seen every black card in these decks — reshuffling." : '', true);
+  }
+
+  function drawWhiteCards() {
+    const selectedPacks = getSelectedPacks();
+    if (selectedPacks.length === 0) {
+      setStatus('Select at least one deck first.');
+      return;
+    }
+
+    const handSize = getHandSize();
+    const responseCards = getCardsForPacks(selectedPacks, 'responses');
+    if (responseCards.length < handSize) {
+      setStatus(`Selected decks only have ${responseCards.length} white card(s) — lower the hand size or add more decks.`);
+      return;
+    }
+
+    playFlipSound();
+    const { cards, reshuffled } = drawWithoutRepeats(selectedPacks, 'responses', handSize);
+    displayCards(cards, 'White Cards');
+    setStatus(reshuffled ? "You've seen every white card in these decks — reshuffling." : '', true);
+  }
+
+  function displayCards(cards, heading) {
+    mainMenu.classList.add('hidden');
+    isHandMode = heading === 'White Cards';
+    currentHand = cards;
+    selectedIndices = new Set();
+
+    cardDisplayHeading.textContent = heading === 'Black Card' ? 'Drawn Black Card' : 'Your Hand';
+    renderHand();
+
+    selectionBar.classList.toggle('hidden', !isHandMode);
+    updateSelectionBar();
+    blackCardBar.classList.toggle('hidden', isHandMode);
+
+    cardDisplay.style.display = 'block';
+    // Scroll the newly drawn cards into view, then focus the back button
+    // without letting that focus itself yank the scroll position back down.
+    cardDisplay.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    document.getElementById('back-to-menu').focus({ preventScroll: true });
+  }
+
+  // Renders cardsContainer from currentHand once per draw. Element references
+  // are kept in handElements so a selection toggle only updates the one card
+  // that changed, instead of rebuilding the whole hand.
+  let handElements = [];
+
+  function renderHand() {
+    cardsContainer.innerHTML = '';
+    handElements = [];
+
+    currentHand.forEach((card, index) => {
+      const cardElement = document.createElement('div');
+      cardElement.classList.add('card');
+      cardElement.style.animationDelay = `${index * 60}ms`;
+
+      if (card.Type === 'Prompt') {
+        cardElement.classList.add('black-card');
+        cardElement.textContent = reduceUnderscores(card.Text);
+      } else {
+        cardElement.textContent = card.Text;
+
+        if (isHandMode) {
+          cardElement.classList.add('selectable');
+          cardElement.setAttribute('role', 'checkbox');
+          cardElement.setAttribute('aria-checked', 'false');
+          cardElement.setAttribute('tabindex', '0');
+
+          const badge = document.createElement('span');
+          badge.className = 'card-select-badge';
+          badge.setAttribute('aria-hidden', 'true');
+          badge.textContent = '✓';
+          cardElement.appendChild(badge);
+
+          const toggle = () => toggleCardSelection(index);
+          cardElement.addEventListener('click', toggle);
+          cardElement.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              toggle();
+            }
+          });
+        }
+      }
+
+      cardsContainer.appendChild(cardElement);
+      handElements[index] = cardElement;
+    });
+  }
+
+  function toggleCardSelection(index) {
+    const isSelected = selectedIndices.has(index);
+    if (isSelected) {
+      selectedIndices.delete(index);
+    } else {
+      selectedIndices.add(index);
+    }
+
+    // Update only the affected card, not the whole hand.
+    const el = handElements[index];
+    if (el) {
+      const nowSelected = !isSelected;
+      el.classList.toggle('selected', nowSelected);
+      el.setAttribute('aria-checked', String(nowSelected));
+    }
+
+    updateSelectionBar();
+  }
+
+  function updateSelectionBar() {
+    const count = selectedIndices.size;
+    selectionCount.textContent = count === 1 ? '1 selected' : `${count} selected`;
+    revealSelectedButton.disabled = count === 0;
+  }
+
+  function showCardsFullScreen(cards) {
+    if (cards.length === 0) return;
+
+    fullscreenCards.innerHTML = '';
+    cards.forEach((card, index) => {
+      const el = document.createElement('div');
+      el.className = 'fullscreen-card';
+      if (card.Type === 'Prompt') {
+        el.classList.add('fullscreen-black-card');
+        el.textContent = reduceUnderscores(card.Text);
+      } else {
+        el.textContent = card.Text;
+      }
+      el.style.animationDelay = `${index * 60}ms`;
+      fullscreenCards.appendChild(el);
+    });
+
+    fullscreenReveal.classList.remove('hidden');
+    fullscreenClose.focus();
+  }
+
+  function showSelectedFullScreen() {
+    const selectedCards = currentHand.filter((_, index) => selectedIndices.has(index));
+    showCardsFullScreen(selectedCards);
+  }
+
+  function showBlackCardFullScreen() {
+    showCardsFullScreen(currentHand);
+  }
+
+  function closeFullScreen() {
+    fullscreenReveal.classList.add('hidden');
+  }
+
+  revealSelectedButton.addEventListener('click', showSelectedFullScreen);
+  revealBlackButton.addEventListener('click', showBlackCardFullScreen);
+  fullscreenClose.addEventListener('click', closeFullScreen);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !fullscreenReveal.classList.contains('hidden')) {
+      closeFullScreen();
+    }
+  });
+
+  function returnToMenu() {
+    cardDisplay.style.display = 'none';
+    mainMenu.classList.remove('hidden');
+    handElements = [];
+    closeFullScreen();
+  }
+
+  /* ============================================================
+     Turn-order / role system
+     Every player's device independently knows: total player count,
+     its own seat number, and the current round number. Card Czar
+     for a round = (round mod numPlayers) + 1. Players tap "Next
+     Round" on their own device after each round to stay in sync —
+     there's no server, so this relies on everyone advancing together.
+  ============================================================ */
+  function getGameConfig() {
+    const numPlayers = parseInt(localStorage.getItem(STORAGE_KEYS.numPlayers), 10);
+    const myPosition = parseInt(localStorage.getItem(STORAGE_KEYS.myPosition), 10);
+    if (!Number.isFinite(numPlayers) || !Number.isFinite(myPosition)) return null;
+    return { numPlayers, myPosition };
+  }
+
+  function getRound() {
+    const round = parseInt(localStorage.getItem(STORAGE_KEYS.round), 10);
+    return Number.isFinite(round) ? round : 0;
+  }
+
+  function isCzarThisRound(config, round) {
+    const czarPosition = (round % config.numPlayers) + 1;
+    return czarPosition === config.myPosition;
+  }
+
+  function renderRole() {
+    const config = getGameConfig();
+    if (!config) {
+      showSetup();
+      return;
+    }
+
+    const round = getRound();
+    const amCzar = isCzarThisRound(config, round);
+
+    whoAmI.textContent = `Player ${config.myPosition} of ${config.numPlayers} · Round ${round + 1}`;
+
+    rolePill.textContent = amCzar ? '⚖️ Card Czar' : '🃏 Player';
+    rolePill.classList.toggle('czar', amCzar);
+    rolePill.classList.toggle('player', !amCzar);
+
+    blackBtn.classList.toggle('hidden', !amCzar);
+    whiteBtn.classList.toggle('hidden', amCzar);
+
+    roleHint.textContent = amCzar
+      ? "You're the Card Czar this round — draw the black card and read it aloud."
+      : "Draw your hand of white cards and pick your best response.";
+  }
+
+  function goToNextRound() {
+    const round = getRound();
+    localStorage.setItem(STORAGE_KEYS.round, String(round + 1));
+    returnToMenu();
+    renderRole();
+    setStatus('');
+  }
+
+  nextRoundButton.addEventListener('click', goToNextRound);
+
+  /* ============================================================
+     Setup screen
+  ============================================================ */
+  function populatePositionOptions() {
+    const numPlayers = Math.max(3, Math.min(20, parseInt(numPlayersInput.value, 10) || 3));
+    const previousSelection = myPositionSelect.value;
+    myPositionSelect.innerHTML = '';
+    for (let i = 1; i <= numPlayers; i++) {
+      const option = document.createElement('option');
+      option.value = String(i);
+      option.textContent = `Player ${i}`;
+      myPositionSelect.appendChild(option);
+    }
+    if (previousSelection && Number(previousSelection) <= numPlayers) {
+      myPositionSelect.value = previousSelection;
+    }
+  }
+
+  numPlayersInput.addEventListener('input', populatePositionOptions);
+
+  function showSetup() {
+    // Pre-fill with existing config, if any, so "Change players" doesn't lose progress.
+    const config = getGameConfig();
+    if (config) {
+      numPlayersInput.value = config.numPlayers;
+    }
+    populatePositionOptions();
+    if (config) {
+      myPositionSelect.value = String(config.myPosition);
+    }
+    setupScreen.classList.remove('hidden');
+    mainMenu.classList.add('hidden');
+    cardDisplay.style.display = 'none';
+  }
+
+  function hideSetup() {
+    setupScreen.classList.add('hidden');
+    mainMenu.classList.remove('hidden');
+  }
+
+  setupForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const numPlayers = Math.max(3, Math.min(20, parseInt(numPlayersInput.value, 10) || 3));
+    const myPosition = parseInt(myPositionSelect.value, 10);
+
+    localStorage.setItem(STORAGE_KEYS.numPlayers, String(numPlayers));
+    localStorage.setItem(STORAGE_KEYS.myPosition, String(myPosition));
+    if (!localStorage.getItem(STORAGE_KEYS.round)) {
+      localStorage.setItem(STORAGE_KEYS.round, '0');
+    }
+
+    hideSetup();
+    renderRole();
+  });
+
+  changeSetupButton.addEventListener('click', showSetup);
+
+  fullResetButton.addEventListener('click', () => {
+    if (!confirm('Reset players, round, deck selection, and hand size? This only affects this device.')) return;
+    Object.values(STORAGE_KEYS).forEach(key => {
+      if (key === STORAGE_KEYS.mode) return; // keep light/dark preference
+      localStorage.removeItem(key);
+    });
+    numPlayersInput.value = 4;
+    populatePositionOptions();
+    populatePackSelection();
+    handSizeInput.value = 7;
+    setStatus('Everything reset on this device.', true);
+    showSetup();
+  });
+
+  /* ============================================================
+     Wire up remaining events + init
+  ============================================================ */
+  blackBtn.addEventListener('click', drawBlackCard);
+  whiteBtn.addEventListener('click', drawWhiteCards);
+  document.getElementById('back-to-menu').addEventListener('click', returnToMenu);
+  toggleButton.addEventListener('click', toggleMode);
+
+  initMode();
+
+  // Restore saved hand size
+  const savedHandSize = parseInt(localStorage.getItem(STORAGE_KEYS.handSize), 10);
+  if (Number.isFinite(savedHandSize)) {
+    handSizeInput.value = Math.max(1, Math.min(20, savedHandSize));
+  }
+
+  populatePositionOptions();
+
+  if (getGameConfig()) {
+    hideSetup();
+    renderRole();
+  } else {
+    showSetup();
+  }
+
+  loadCards();
+})();
+</script>
 </body>
 </html>
