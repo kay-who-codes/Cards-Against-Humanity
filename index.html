@@ -20,6 +20,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
+
   /* ==========================================================
      Tokens
      Paper cardstock, table-lamp warmth, ink black. The two
@@ -968,53 +969,21 @@
   .hidden {
     display: none !important;
   }
+
 </style>
 </head>
 
 <body>
 
-  <!-- Setup Screen: each player identifies player count + their own seat -->
-  <div id="setup-screen">
-    <h1>Cards Against Humanity</h1>
-    <p class="setup-explainer">
-      Everyone's playing on their own device. Enter how many players are in the game and
-      which seat you are — the app will work out who's Card Czar each round.
-    </p>
-    <form id="setup-form">
-      <div class="setup-field">
-        <label for="num-players">How many players?</label>
-        <input type="number" id="num-players" min="3" max="20" value="4" required>
-      </div>
-      <div class="setup-field">
-        <label for="my-position">Which player are you?</label>
-        <select id="my-position"></select>
-      </div>
-      <button type="submit">Start Playing</button>
-    </form>
-    <div class="setup-reset-row">
-      <button type="button" class="link-button" id="full-reset-button">Reset everything</button>
-    </div>
-  </div>
-
   <!-- Main Menu -->
-  <div class="main-menu hidden" id="main-menu">
+  <div class="main-menu" id="main-menu">
     <h1>Cards Against Humanity</h1>
-
-    <div class="player-banner">
-      <span class="who" id="who-am-i"></span>
-      <span class="role-pill" id="role-pill"></span>
-      <div class="round-controls">
-        <button class="small-button" id="next-round-button">Next Round ▶</button>
-        <button class="link-button" id="change-setup-button">Change players</button>
-      </div>
-    </div>
 
     <!-- Button Container -->
     <div class="button-container">
       <button class="draw-black-card" id="draw-black-card" disabled>Draw Black Card</button>
       <button class="draw-white-cards" id="draw-white-cards" disabled>Draw White Cards</button>
     </div>
-    <p class="role-hint" id="role-hint"></p>
 
     <!-- Deck Selection -->
     <div class="select-decks-row">
@@ -1076,35 +1045,28 @@
 (() => {
   const STORAGE_KEYS = {
     mode: 'mode',
-    numPlayers: 'cah_numPlayers',
-    myPosition: 'cah_myPosition',
-    round: 'cah_round',
     handSize: 'cah_handSize',
     packs: 'cah_selectedPacks'
   };
+
+  // Clean up keys left behind by the old turn/round system.
+  ['cah_numPlayers', 'cah_myPosition', 'cah_round'].forEach(key => {
+    try { localStorage.removeItem(key); } catch (e) {}
+  });
+
+  // Chance (0–1) that a drawn white hand includes one editable blank card.
+  const BLANK_CARD_CHANCE = 0.069;
 
   let cardsData = [];
   // Memoized lookup: Map<packName, { prompts: [...], responses: [...] }>
   // Built once when cards load so draws never re-filter the whole dataset.
   let packIndex = new Map();
 
-  // Tracks which card indices (within a pack's prompts/responses arrays) have
-  // already been drawn this session, so the same card doesn't repeat until
-  // its pack is exhausted and reshuffled. Keyed as `${pack}|${kind}`.
+  // Tracks which cards have already been drawn this session, so the same card
+  // doesn't repeat until its pool is exhausted and reshuffled.
   let drawnTracker = new Map();
 
-  const setupScreen = document.getElementById('setup-screen');
-  const setupForm = document.getElementById('setup-form');
-  const numPlayersInput = document.getElementById('num-players');
-  const myPositionSelect = document.getElementById('my-position');
-  const fullResetButton = document.getElementById('full-reset-button');
-
   const mainMenu = document.getElementById('main-menu');
-  const whoAmI = document.getElementById('who-am-i');
-  const rolePill = document.getElementById('role-pill');
-  const roleHint = document.getElementById('role-hint');
-  const nextRoundButton = document.getElementById('next-round-button');
-  const changeSetupButton = document.getElementById('change-setup-button');
 
   const blackBtn = document.getElementById('draw-black-card');
   const whiteBtn = document.getElementById('draw-white-cards');
@@ -1248,9 +1210,7 @@
     let reshuffled = false;
 
     if (available.length < count) {
-      // Pool exhausted (or too small) — reshuffle by clearing what's been seen,
-      // but keep any cards already picked in this draw excluded so this single
-      // draw still has no internal duplicates.
+      // Pool exhausted (or too small) — reshuffle by clearing what's been seen.
       reshuffled = seen.size > 0;
       seen.clear();
       available = allCards.slice();
@@ -1390,7 +1350,17 @@
     }
 
     playFlipSound();
-    const { cards, reshuffled } = drawWithoutRepeats(selectedPacks, 'responses', handSize);
+
+    // 6.9% chance the hand contains one blank card (never more than one).
+    // The blank takes one slot, so the hand stays the same size.
+    const hasBlank = Math.random() < BLANK_CARD_CHANCE;
+    const { cards, reshuffled } = drawWithoutRepeats(
+      selectedPacks, 'responses', hasBlank ? handSize - 1 : handSize
+    );
+    if (hasBlank) {
+      const blankCard = { Pack: '', Type: 'Response', Text: '', Blank: true };
+      cards.splice(Math.floor(Math.random() * (cards.length + 1)), 0, blankCard);
+    }
     displayCards(cards, 'White Cards');
     setStatus(reshuffled ? "You've seen every white card in these decks — reshuffling." : '', true);
   }
@@ -1433,7 +1403,25 @@
         cardElement.classList.add('black-card');
         cardElement.textContent = reduceUnderscores(card.Text);
       } else {
-        cardElement.textContent = card.Text;
+        if (card.Blank) {
+          cardElement.classList.add('blank-card');
+          const field = document.createElement('textarea');
+          field.className = 'blank-card-input';
+          field.placeholder = 'Write your own card…';
+          field.setAttribute('aria-label', 'Blank card: write your own answer');
+          field.maxLength = 140;
+          field.rows = 4;
+          field.value = card.Text;
+          // Minimal inline styles so the field blends into the card.
+          field.style.cssText = 'width:100%;background:transparent;border:none;outline:none;' +
+            'resize:none;font:inherit;color:inherit;text-align:inherit;';
+          field.addEventListener('input', () => { card.Text = field.value; });
+          // Typing/tapping in the field must not toggle card selection.
+          field.addEventListener('click', (e) => e.stopPropagation());
+          cardElement.appendChild(field);
+        } else {
+          cardElement.textContent = card.Text;
+        }
 
         if (isHandMode) {
           cardElement.classList.add('selectable');
@@ -1450,6 +1438,8 @@
           const toggle = () => toggleCardSelection(index);
           cardElement.addEventListener('click', toggle);
           cardElement.addEventListener('keydown', (e) => {
+            // Ignore keys typed inside a blank card's text field.
+            if (e.target !== cardElement) return;
             if (e.key === 'Enter' || e.key === ' ') {
               e.preventDefault();
               toggle();
@@ -1499,7 +1489,7 @@
         el.classList.add('fullscreen-black-card');
         el.textContent = reduceUnderscores(card.Text);
       } else {
-        el.textContent = card.Text;
+        el.textContent = card.Blank && !card.Text.trim() ? '________' : card.Text;
       }
       el.style.animationDelay = `${index * 60}ms`;
       fullscreenCards.appendChild(el);
@@ -1539,137 +1529,7 @@
   }
 
   /* ============================================================
-     Turn-order / role system
-     Every player's device independently knows: total player count,
-     its own seat number, and the current round number. Card Czar
-     for a round = (round mod numPlayers) + 1. Players tap "Next
-     Round" on their own device after each round to stay in sync —
-     there's no server, so this relies on everyone advancing together.
-  ============================================================ */
-  function getGameConfig() {
-    const numPlayers = parseInt(localStorage.getItem(STORAGE_KEYS.numPlayers), 10);
-    const myPosition = parseInt(localStorage.getItem(STORAGE_KEYS.myPosition), 10);
-    if (!Number.isFinite(numPlayers) || !Number.isFinite(myPosition)) return null;
-    return { numPlayers, myPosition };
-  }
-
-  function getRound() {
-    const round = parseInt(localStorage.getItem(STORAGE_KEYS.round), 10);
-    return Number.isFinite(round) ? round : 0;
-  }
-
-  function isCzarThisRound(config, round) {
-    const czarPosition = (round % config.numPlayers) + 1;
-    return czarPosition === config.myPosition;
-  }
-
-  function renderRole() {
-    const config = getGameConfig();
-    if (!config) {
-      showSetup();
-      return;
-    }
-
-    const round = getRound();
-    const amCzar = isCzarThisRound(config, round);
-
-    whoAmI.textContent = `Player ${config.myPosition} of ${config.numPlayers} · Round ${round + 1}`;
-
-    rolePill.textContent = amCzar ? '⚖️ Card Czar' : '🃏 Player';
-    rolePill.classList.toggle('czar', amCzar);
-    rolePill.classList.toggle('player', !amCzar);
-
-    blackBtn.classList.toggle('hidden', !amCzar);
-    whiteBtn.classList.toggle('hidden', amCzar);
-
-    roleHint.textContent = amCzar
-      ? "You're the Card Czar this round — draw the black card and read it aloud."
-      : "Draw your hand of white cards and pick your best response.";
-  }
-
-  function goToNextRound() {
-    const round = getRound();
-    localStorage.setItem(STORAGE_KEYS.round, String(round + 1));
-    returnToMenu();
-    renderRole();
-    setStatus('');
-  }
-
-  nextRoundButton.addEventListener('click', goToNextRound);
-
-  /* ============================================================
-     Setup screen
-  ============================================================ */
-  function populatePositionOptions() {
-    const numPlayers = Math.max(3, Math.min(20, parseInt(numPlayersInput.value, 10) || 3));
-    const previousSelection = myPositionSelect.value;
-    myPositionSelect.innerHTML = '';
-    for (let i = 1; i <= numPlayers; i++) {
-      const option = document.createElement('option');
-      option.value = String(i);
-      option.textContent = `Player ${i}`;
-      myPositionSelect.appendChild(option);
-    }
-    if (previousSelection && Number(previousSelection) <= numPlayers) {
-      myPositionSelect.value = previousSelection;
-    }
-  }
-
-  numPlayersInput.addEventListener('input', populatePositionOptions);
-
-  function showSetup() {
-    // Pre-fill with existing config, if any, so "Change players" doesn't lose progress.
-    const config = getGameConfig();
-    if (config) {
-      numPlayersInput.value = config.numPlayers;
-    }
-    populatePositionOptions();
-    if (config) {
-      myPositionSelect.value = String(config.myPosition);
-    }
-    setupScreen.classList.remove('hidden');
-    mainMenu.classList.add('hidden');
-    cardDisplay.style.display = 'none';
-  }
-
-  function hideSetup() {
-    setupScreen.classList.add('hidden');
-    mainMenu.classList.remove('hidden');
-  }
-
-  setupForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const numPlayers = Math.max(3, Math.min(20, parseInt(numPlayersInput.value, 10) || 3));
-    const myPosition = parseInt(myPositionSelect.value, 10);
-
-    localStorage.setItem(STORAGE_KEYS.numPlayers, String(numPlayers));
-    localStorage.setItem(STORAGE_KEYS.myPosition, String(myPosition));
-    if (!localStorage.getItem(STORAGE_KEYS.round)) {
-      localStorage.setItem(STORAGE_KEYS.round, '0');
-    }
-
-    hideSetup();
-    renderRole();
-  });
-
-  changeSetupButton.addEventListener('click', showSetup);
-
-  fullResetButton.addEventListener('click', () => {
-    if (!confirm('Reset players, round, deck selection, and hand size? This only affects this device.')) return;
-    Object.values(STORAGE_KEYS).forEach(key => {
-      if (key === STORAGE_KEYS.mode) return; // keep light/dark preference
-      localStorage.removeItem(key);
-    });
-    numPlayersInput.value = 4;
-    populatePositionOptions();
-    populatePackSelection();
-    handSizeInput.value = 7;
-    setStatus('Everything reset on this device.', true);
-    showSetup();
-  });
-
-  /* ============================================================
-     Wire up remaining events + init
+     Wire up events + init
   ============================================================ */
   blackBtn.addEventListener('click', drawBlackCard);
   whiteBtn.addEventListener('click', drawWhiteCards);
@@ -1682,15 +1542,6 @@
   const savedHandSize = parseInt(localStorage.getItem(STORAGE_KEYS.handSize), 10);
   if (Number.isFinite(savedHandSize)) {
     handSizeInput.value = Math.max(1, Math.min(20, savedHandSize));
-  }
-
-  populatePositionOptions();
-
-  if (getGameConfig()) {
-    hideSetup();
-    renderRole();
-  } else {
-    showSetup();
   }
 
   loadCards();
